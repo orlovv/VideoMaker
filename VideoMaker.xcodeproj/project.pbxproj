@@ -10,11 +10,13 @@
 		2C45F1BE1FE813CB0072F7EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45F1BD1FE813CB0072F7EC /* AppDelegate.swift */; };
 		2C45F1C01FE813CB0072F7EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45F1BF1FE813CB0072F7EC /* ViewController.swift */; };
 		2C45F1C31FE813CB0072F7EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C45F1C11FE813CB0072F7EC /* Main.storyboard */; };
-		2C45F1C61FE813CB0072F7EC /* VideoMaker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C45F1C41FE813CB0072F7EC /* VideoMaker.xcdatamodeld */; };
 		2C45F1C81FE813CC0072F7EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C45F1C71FE813CB0072F7EC /* Assets.xcassets */; };
 		2C45F1CB1FE813CC0072F7EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C45F1C91FE813CC0072F7EC /* LaunchScreen.storyboard */; };
 		2C45F1D61FE813CC0072F7EC /* VideoMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45F1D51FE813CC0072F7EC /* VideoMakerTests.swift */; };
 		2C45F1E11FE813CC0072F7EC /* VideoMakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45F1E01FE813CC0072F7EC /* VideoMakerUITests.swift */; };
+		2C45F1EF1FE81F0A0072F7EC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45F1EE1FE81F0A0072F7EC /* TableViewCell.swift */; };
+		7C22069E1FE946E90015879C /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C22069D1FE946E90015879C /* VideoManager.swift */; };
+		7C2206A01FE948900015879C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C22069F1FE948900015879C /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,6 @@
 		2C45F1BD1FE813CB0072F7EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C45F1BF1FE813CB0072F7EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2C45F1C21FE813CB0072F7EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2C45F1C51FE813CB0072F7EC /* VideoMaker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VideoMaker.xcdatamodel; sourceTree = "<group>"; };
 		2C45F1C71FE813CB0072F7EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C45F1CA1FE813CC0072F7EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C45F1CC1FE813CC0072F7EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		2C45F1DC1FE813CC0072F7EC /* VideoMakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoMakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C45F1E01FE813CC0072F7EC /* VideoMakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoMakerUITests.swift; sourceTree = "<group>"; };
 		2C45F1E21FE813CC0072F7EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C45F1EE1FE81F0A0072F7EC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		7C22069D1FE946E90015879C /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
+		7C22069F1FE948900015879C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		2C45F1B11FE813CB0072F7EC = {
 			isa = PBXGroup;
 			children = (
+				7C22069F1FE948900015879C /* Default-568h@2x.png */,
 				2C45F1BC1FE813CB0072F7EC /* VideoMaker */,
 				2C45F1D41FE813CC0072F7EC /* VideoMakerTests */,
 				2C45F1DF1FE813CC0072F7EC /* VideoMakerUITests */,
@@ -99,13 +104,11 @@
 		2C45F1BC1FE813CB0072F7EC /* VideoMaker */ = {
 			isa = PBXGroup;
 			children = (
-				2C45F1BD1FE813CB0072F7EC /* AppDelegate.swift */,
-				2C45F1BF1FE813CB0072F7EC /* ViewController.swift */,
-				2C45F1C11FE813CB0072F7EC /* Main.storyboard */,
-				2C45F1C71FE813CB0072F7EC /* Assets.xcassets */,
-				2C45F1C91FE813CC0072F7EC /* LaunchScreen.storyboard */,
-				2C45F1CC1FE813CC0072F7EC /* Info.plist */,
-				2C45F1C41FE813CB0072F7EC /* VideoMaker.xcdatamodeld */,
+				7C2206981FE946100015879C /* AppDelegate */,
+				7C2206991FE946340015879C /* Model */,
+				7C22069B1FE946440015879C /* Controller */,
+				7C22069A1FE9463E0015879C /* View */,
+				7C22069C1FE9465A0015879C /* Resources */,
 			);
 			path = VideoMaker;
 			sourceTree = "<group>";
@@ -126,6 +129,49 @@
 				2C45F1E21FE813CC0072F7EC /* Info.plist */,
 			);
 			path = VideoMakerUITests;
+			sourceTree = "<group>";
+		};
+		7C2206981FE946100015879C /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2C45F1BD1FE813CB0072F7EC /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		7C2206991FE946340015879C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C22069D1FE946E90015879C /* VideoManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7C22069A1FE9463E0015879C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C45F1EE1FE81F0A0072F7EC /* TableViewCell.swift */,
+				2C45F1C11FE813CB0072F7EC /* Main.storyboard */,
+				2C45F1C91FE813CC0072F7EC /* LaunchScreen.storyboard */,
+				2C45F1C71FE813CB0072F7EC /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7C22069B1FE946440015879C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C45F1BF1FE813CB0072F7EC /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7C22069C1FE9465A0015879C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C45F1CC1FE813CC0072F7EC /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C45F1CB1FE813CC0072F7EC /* LaunchScreen.storyboard in Resources */,
+				7C2206A01FE948900015879C /* Default-568h@2x.png in Resources */,
 				2C45F1C81FE813CC0072F7EC /* Assets.xcassets in Resources */,
 				2C45F1C31FE813CB0072F7EC /* Main.storyboard in Resources */,
 			);
@@ -262,9 +309,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C45F1C61FE813CB0072F7EC /* VideoMaker.xcdatamodeld in Sources */,
+				2C45F1EF1FE81F0A0072F7EC /* TableViewCell.swift in Sources */,
 				2C45F1C01FE813CB0072F7EC /* ViewController.swift in Sources */,
 				2C45F1BE1FE813CB0072F7EC /* AppDelegate.swift in Sources */,
+				7C22069E1FE946E90015879C /* VideoManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,9 +479,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39F8JVBPSH;
 				INFOPLIST_FILE = VideoMaker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sid775.VideoMaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.org.VideoEditing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -445,9 +495,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39F8JVBPSH;
 				INFOPLIST_FILE = VideoMaker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sid775.VideoMaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.org.VideoEditing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -556,19 +608,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		2C45F1C41FE813CB0072F7EC /* VideoMaker.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2C45F1C51FE813CB0072F7EC /* VideoMaker.xcdatamodel */,
-			);
-			currentVersion = 2C45F1C51FE813CB0072F7EC /* VideoMaker.xcdatamodel */;
-			path = VideoMaker.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 2C45F1B21FE813CB0072F7EC /* Project object */;
 }
