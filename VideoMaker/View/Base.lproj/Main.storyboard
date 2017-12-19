@@ -61,10 +61,12 @@
                                                 <constraint firstItem="2IL-ik-bCw" firstAttribute="centerY" secondItem="AAQ-CK-PAB" secondAttribute="centerY" id="skY-oz-dnp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="videoLength" destination="kjP-SU-gQA" id="ELb-u5-eyZ"/>
                                             <outlet property="videoName" destination="kku-BX-RSP" id="xmD-1B-qjW"/>
                                             <outlet property="videoPreview" destination="2IL-ik-bCw" id="HLx-4r-oVe"/>
+                                            <segue destination="7YY-hI-482" kind="show" identifier="ShowVideo" id="F02-UI-QYM"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -93,6 +95,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="978" y="131"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="pKW-7L-ULz">
+            <objects>
+                <viewController id="7YY-hI-482" customClass="VideoViewController" customModule="VideoMaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="08X-qb-R5V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQV-f2-lZE">
+                                <rect key="frame" x="0.0" y="227.5" width="375" height="211"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aQV-f2-lZE" secondAttribute="height" multiplier="16:9" id="7Cv-62-bOe"/>
+                                </constraints>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JES-RE-EwY">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.41993199481865284" green="0.41993199481865284" blue="0.41993199481865284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6rJ-Q3-Oqy"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="edit" id="bkW-vL-D5g"/>
+                                </items>
+                                <color key="barTintColor" red="0.99591861398176185" green="0.97073454981614926" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.17790641191709844" green="0.17790641191709844" blue="0.17790641191709844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JES-RE-EwY" firstAttribute="trailing" secondItem="Rd1-hD-e3B" secondAttribute="trailing" id="1k9-sm-ypG"/>
+                            <constraint firstItem="JES-RE-EwY" firstAttribute="bottom" secondItem="Rd1-hD-e3B" secondAttribute="bottom" id="8jA-ha-Aix"/>
+                            <constraint firstItem="JES-RE-EwY" firstAttribute="leading" secondItem="Rd1-hD-e3B" secondAttribute="leading" id="AuN-mf-0Pl"/>
+                            <constraint firstItem="aQV-f2-lZE" firstAttribute="trailing" secondItem="Rd1-hD-e3B" secondAttribute="trailing" id="GqT-Lv-OQj"/>
+                            <constraint firstItem="aQV-f2-lZE" firstAttribute="centerY" secondItem="08X-qb-R5V" secondAttribute="centerY" id="YNR-4x-Q4e"/>
+                            <constraint firstItem="aQV-f2-lZE" firstAttribute="leading" secondItem="Rd1-hD-e3B" secondAttribute="leading" id="dkn-R0-69j"/>
+                            <constraint firstItem="aQV-f2-lZE" firstAttribute="centerX" secondItem="08X-qb-R5V" secondAttribute="centerX" id="lS3-MP-4Sb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rd1-hD-e3B"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gBN-ny-ZM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1877.5999999999999" y="130.88455772113943"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="p5N-y2-vHo">

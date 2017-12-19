@@ -22,6 +22,7 @@ class ViewController: UIViewController {
       tableView.reloadData()
     }
   }
+  var assetURL: URL?
   
   //MARK: - Lifecycle
   override func viewDidLoad() {
@@ -61,6 +62,13 @@ class ViewController: UIViewController {
     }
   }
   
+  //MARK: - Segues
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let destVC = segue.destination as? VideoViewController, segue.identifier == Segue.showVideo {
+      destVC.assetURL = assetURL
+    }
+  }
+  
 }
 
 extension ViewController: UITableViewDataSource {
@@ -70,11 +78,12 @@ extension ViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseId, for: indexPath) as! TableViewCell
     
     if let asset = videos?[indexPath.row] {
       cell.videoName?.text = asset.localIdentifier
-      cell.videoLength.text = String(describing: Int(asset.duration)) + " s"
+      cell.videoLength.text = String(format: "Duration: %02d:%02d",
+                                     Int(asset.duration / 60), Int(asset.duration) % 60)
       
       PHImageManager.default().requestImage(for: asset,
                            targetSize: CGSize(width: cell.videoPreview.bounds.width,
@@ -93,11 +102,14 @@ extension ViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
+    
+    guard let asset = videos?[indexPath.row] else { return }
+    
   }
   
 }
 
-extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension ViewController: UIImagePickerControllerDelegate {
   
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
     guard let mediaType = info[UIImagePickerControllerMediaType] as? String else { return }
@@ -115,3 +127,5 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     }
   }
 }
+
+extension ViewController: UINavigationControllerDelegate {}
